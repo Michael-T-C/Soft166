@@ -2,29 +2,16 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Password Checker</title>
+<title>Password Strength Checker</title>
 <script src="scripts/PasswordChecker.js"></script>
+<style>#p1{background-color:#433BFF</style>
 </head>
 
 <body>
-<p>Hue Lights Password Checker
-</p>
-<table width="450" border="1">
-  <tbody>
-    <tr>
-      <th scope="col">Username</th>
-      <th scope="col">Password</th>
-    </tr>
-    <tr>
-      <td><input type="text" name="textfield" id="usernameTB"></td>
-      <td><input type="text" name="textfield2" id="passwordTB"></td>
-    </tr>
-    <tr>
-      <td>&nbsp;</td>
-      <td><input type="button" name="button" id="btnSubmit" value="Submit" onclick="checkPassword()"></td>
-    </tr>
-  </tbody>
-</table>
-<p>&nbsp;</p>
+	<h1>Password Strength</h1>
+	<label>Enter Password</label>
+	<input type="text" autocomplete="none" id="cPassword">
+	<progress max="100" value="0" id="strengthMeter" style="width: 300px"></progress>
 </body>
+	
 </html>
