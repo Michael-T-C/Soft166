@@ -4,12 +4,16 @@
 <meta charset="utf-8">
 <title>Password Strength Checker</title>
 <script src="scripts/PasswordChecker.js"></script>
-<style>#p1{background-color:#433BFF</style>
+<style>
+body {
+  background-color: lightblue;
+}
+</style>
 </head>
 
 <body>
-	<h1>Password Strength</h1>
-	<label>Enter Password</label>
+	<h1 align="center">How secure is my Password?</h1>
+	<label align="center">Enter Password</label><br>
 	<input type="text" autocomplete="none" id="cPassword">
 	<progress max="100" value="0" id="strengthMeter" style="width: 300px"></progress>
 </body>
