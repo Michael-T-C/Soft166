@@ -21,5 +21,17 @@ Although there is numerous features throughout my webpage, here is five that i b
 
 ## Multiple browser testing
 
+#### Internet Explorer
+
+
+#### Microsoft Edge
+
 
 ## Testing web accessiblity
+
+#### High contrast visuals
+
+#### Navigating the site using only the keyboard
+
+#### Turning off images
+
