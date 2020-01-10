@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+    <meta charset="utf-8" />
+    <title>Password Strength Checker</title>
+    
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: #111;
+                }
+    </style>
+
+
+</head>
+<body style="background-color:powderblue;">
+    <ul>
+        <li><a href="Index.html">Index</a></li>
+        <li><a href="Application.html">Application</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="LightsKey.html">Lights</a></li>
+    </ul>
+
+    <h1 align="center">How secure is my Password?</h1>
+    <p align="center">Enter Password</p><br>
+
+    <table align="center" width="250px" border="1">
+        <tr>
+            <td><input type="text" name="textbox" id="passwordText" style="width: 315px" /></td>
+        </tr>
+        <tr>
+            <td><progress max="100" value="0" id="strengthMeter" style="width: 320px"></progress></td>
+        </tr>
+    </table>
+
+    <br /><br />
+
+    <table align="center" width="400px" border="1">
+        <tr>
+            <td><p><b>How can I make my password stronger?</b></p></td>
+        </tr>
+        <tr>
+            <td><p>The more characters, the better!</p></td>
+        </tr>
+        <tr>
+            <td><p>Try including a variety of characters (EXAMPLE: ! ? @ &)</p></td>
+        </tr>
+        <tr>
+            <td><p><b>Things to Avoid</b></p></td>
+        </tr>
+        <tr>
+            <td><p>Using only letters, this makes them easier to crack!</p></td>
+        </tr>
+        <tr>
+            <td><p>Full common words or phrases (EXAMPLE: football9)</p></td>
+        </tr>
+        <tr>
+            <td><p>Easy strings of characters (EXAMPLE: ball34567)</p></td>
+        </tr>
+    </table>
+
+</body>
+</html>
+
+<script>
+
+var password = document.getElementById("passwordText")
+password.addEventListener('keydown', function () {
+	checkPassword(password.value)
+})
+
+    function checkPassword(password) {
+
+        var strengthBar = document.getElementById("strengthMeter")
+
+        var strength = 0;
+        strengthBar.value = 0;
+
+        if (password.match(/[a-z]/)) {
+            strength += 10
+        }
+        if (password.match(/[A-Z]+/)) {
+            strength += 10
+        }
+        if (password.match(/[0-9]+/)) {
+            strength += 10
+        }
+        if (password.match(/[0-9][0-9]+/)) {
+            strength += 10
+        }
+        if (password.match(/[<>?#~@]+/)) {
+            strength += 10
+        }
+        if (password.match(/[!£$%^&*]+/)) {
+            strength += 10
+        }
+        if (password.match(/[!£$%^&*<>?#~@][!£$%^&*<>?#~@]+/)) {
+            strength += 10
+        }
+        if (password.length >= 5) {
+            strength += 10
+        }
+        if (password.length >= 9) {
+            strength += 10
+        }
+        if (password.length >= 13) {
+            strength += 10
+        }
+
+        if (strength >= 10) {
+            if (strength >= 20) {
+                if (strength >= 30) {
+                    if (strength >= 40) {
+                        if (strength >= 50) {
+                            if (strength >= 60) {
+                                if (strength >= 70) {
+                                    if (strength >= 80) {
+                                        if (strength >= 90) {
+                                            if (strength >= 100) {
+                                                strengthBar.value = 100
+                                                toggleLight('6', true, 0)
+                                            }
+                                            else { strengthBar.value = 90 }
+                                            toggleLight('6', true, 0)
+                                        }
+                                        else { strengthBar.value = 80 }
+                                        toggleLight('5', true, 0)
+                                    }
+                                    else { strengthBar.value = 70 }
+                                    toggleLight('4', true, 0)
+                                }
+                                else { strengthBar.value = 60 }
+                                toggleLight('4', true, 0)
+                            }
+                            else { strengthBar.value = 50 }
+                            toggleLight('3', true, 0)
+                        }
+                        else { strengthBar.value = 40 }
+                        toggleLight('3', true, 0)
+                    }
+                    else { strengthBar.value = 30 }
+                    toggleLight('2', true, 0)
+                }
+                else { strengthBar.value = 20 }
+                toggleLight('2', true, 0)
+            }
+            else { strengthBar.value = 10 }
+            toggleLight('1', true, 0)
+        }
+    }
+
+    //connect to Hue Bridge
+    function getLightURI(lightID) {
+
+        var IP = "http://192.168.0.50/api/";
+        var username = "stlaB2I6VZ8O80Qepc-1xfmLrHgyTFvB9IGupaQz";
+        var lights = "/lights/";
+        var URI = IP + username + lights;
+        return URI + lightID + "/";
+    }
+
+    //toggle lights on and off
+    function toggleLight(lightID, boolValue, colour) {
+
+        var lightState = { "on": boolValue, "hue": colour };
+
+        $.ajax({
+            url: getLightURI(lightID) + "state/",
+            type: "PUT",
+            data: JSON.stringify(lightState)
+        })
+    }
+    
+
+   
+</script>

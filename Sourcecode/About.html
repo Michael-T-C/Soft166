@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Profile Home Page -->
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: #111;
+                }
+    </style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+    <ul>
+        <li><a href="Index.html">Index</a></li>
+        <li><a href="Application.html">Application</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="LightsKey.html">Lights</a></li>
+    </ul>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar">
+        <br>
+        <div class="w3-container">
+            <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+                <i class="fa fa-remove"></i>
+            </a><br><br>
+            <h4><b>Michael Cole</b></h4>
+            <br /><br />
+        </div>
+        <div class="w3-bar-block">
+            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>About</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>Contact</a>
+        </div>
+        <div class="w3-panel w3-large">
+
+        </div>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px">
+        <!-- Header -->
+        <header id="about">
+            <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+            <div class="w3-container">
+                <h1><b>Profile</b></h1>
+                <div class="w3-section w3-bottombar w3-padding-16">
+                    <a href="" style="decoration:none"><button class="w3-button w3-white"><i class="fas fa-info-circle w3-margin-right"></i>About</button></a>
+                    <a href="Application.html" style="decoration:none"> <button class="w3-button w3-white w3-hide-small"><i class="far fa-play-circle  w3-margin-right"></i>Game</button></a>
+                    <a href="Index.html" style="decoration:none"> <button class="w3-button w3-white w3-hide-small" data-target=""><i class="fas fa-key w3-margin-right"></i>Legend</button></a>
+                </div>
+            </div>
+        </header>
+        <div class="w3-row-padding">
+
+        </div>
+
+        <!-- Contact Section -->
+        <div class="w3-container w3-padding-large w3-sand ">
+
+            <table align="center" width="600px" border="1">
+                <tr>
+                    <td><p><b>About Me</b></p></td>
+                    <td><p><b>Programming Skills</b></p></td>
+                </tr>
+                <tr>
+                    <td><p>A young and energetic programmer with a keen interest in technology and a passion to learn and develop appropriate skills and advance technical expertise. Always enthusiastic about  taking on new responsibilities with the aim of learning, and spending years enjoying Mathematics and Programming (academically and leisurely) has led to extra resistance in challenging or stressful situations.</p></td>
+                    <td><p>I have an intermediate level of knowledge on multiple programming languages including C#, C, JavaScript, Python, SQL, and PHP</p></td>
+                </tr>
+                <tr>
+                    <td><p><b>Education</b></p></td>
+                    <td><p><b>Other Skills and Achievements</b></p></td>
+                </tr>
+                <tr>
+                    <td><p>After achieving exceptional grades at GCSE, I went on to study Maths, Physics, Computer Science and Economics at A-Level at Budmouth Technology College, Weymouth.</p>
+                    <p>After receiving the results I needed, I then went on to study Computer and Information Security at the University of Plymouth.</p></td>
+                    <td><p>As a part of my Duke of Edinburgh expedition, a volunteering aspect was required. I took on a role of event organiser for a club for 6 months, but continued on for 3 more years as I valued the opportunity to develop my leadership ability and organisation.</p></td>
+                </tr>
+            </table>
+
+            <h4 id="contact"><b>Contact</b></h4>
+            <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+                <div class="w3-third w3-indigo">
+                    <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+                    <p><a href="mailto:michael.cole-2@students.plymouth.ac.uk">michael.cole-2@students.plymouth.ac.uk</a></p>
+                </div>
+                <div class="w3-third w3-teal">
+                    <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+                    <p><a href="https://goo.gl/maps/YUBgNRcvX6rYc7uz6">Plymouth, UK</a></p>
+                </div>
+                <div class="w3-third w3-dark-grey">
+                    <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+                    <p>Tel: +44 (0) 7542 125545</p>
+                </div>
+            </div>
+
+            <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+        </div>
+        <!-- End page content -->
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }</script>
+</body>
+</html>
