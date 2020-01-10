@@ -30,15 +30,17 @@ Although there is numerous features throughout my webpage, here is five that i b
 
 #### Internet Explorer
 
+![ExplorerTest](https://user-images.githubusercontent.com/44771731/72164394-87e52b80-33bd-11ea-830f-36ab3f0f8db0.png)
 
 #### Microsoft Edge
 
+![EdgeTest](https://user-images.githubusercontent.com/44771731/72164361-7439c500-33bd-11ea-88db-ab766e4226c0.png)
 
 ## Testing web accessiblity
 
 #### High contrast visuals
 
-#### Navigating the site using only the keyboard
+![Contrast](https://user-images.githubusercontent.com/44771731/72164443-992e3800-33bd-11ea-900f-0758ea7a5aab.png)
 
-#### Turning off images
+
 
