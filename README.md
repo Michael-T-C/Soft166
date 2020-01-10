@@ -3,6 +3,13 @@
 
 ## Screenshots of my code
 
+![PasswordChecker](https://user-images.githubusercontent.com/44771731/72163657-24a6c980-33bc-11ea-936c-cb62e1f3584d.png)
+
+![Index](https://user-images.githubusercontent.com/44771731/72163756-4f911d80-33bc-11ea-9e77-fa46303f9dca.png)
+
+![Profile](https://user-images.githubusercontent.com/44771731/72163772-57e95880-33bc-11ea-9463-d177744edca6.png)
+
+![Hue Lights](https://user-images.githubusercontent.com/44771731/72163782-5e77d000-33bc-11ea-984c-fac708461a5d.png)
 
 ## Application fact sheet
 The application that i have created, is a check system that will check the strength of the password entered by the user. As the user types their password into the text box on the application page, the system will start to generate a value of strength based off key factors, such as if the password contains uppercase letters it will have 'x' strength added, the same as if a special character is used then it will add 'y' to the strength value. 
